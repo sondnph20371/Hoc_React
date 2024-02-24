@@ -1,0 +1,96 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.containerTop}>
+        <View style={styles.top}>
+          <Text style={styles.topText}>Top left</Text>
+        </View>
+      </View>
+      <View style={styles.containerCenter}>
+        <View style={styles.center}>
+          <Text style={styles.centerText}>CenterLeft</Text>
+        </View>
+        <View style={styles.center}>
+          <Text style={styles.centerText}>CenterRight</Text>
+        </View>
+      </View>
+      <View style={styles.containerBottom}>
+        <View style={styles.bottom}>
+          <Text style={styles.bottomText}>Bottom right</Text>
+        </View>
+      </View>
+
+
+
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#a0e5f4',
+   
+  },
+  containerTop: {
+    flex: 1
+  },
+  containerCenter: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  containerBottom: {
+    flex: 1
+  },
+  topText: {
+    fontSize: 20,
+    color: 'blue',
+    fontStyle: 'bold',
+  },
+  bottomText: {
+    fontSize: 20,
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'right',
+  },
+  centerText: {
+    fontSize: 20,
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  top: {
+    marginTop: 80,
+    marginLeft: 40,
+    marginRight: 40,
+    backgroundColor: 'white',
+    padding: 20,
+    borderWidth: 4,
+    borderColor: 'red',
+  },
+  bottom: {
+    marginTop: 150,
+    marginHorizontal: 40,
+    backgroundColor: 'blue',
+    padding: 10,
+    borderWidth: 4,
+    borderColor: 'red',
+    borderRadius: 20
+  },
+  center:{
+    width: 150,
+    height: 150,
+    backgroundColor: 'green',
+    borderRadius:100,
+    justifyContent: 'center',
+    alignItems:'center',
+  }
+
+});
+
+
